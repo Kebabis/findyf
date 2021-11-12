@@ -176,7 +176,6 @@ body{
 	color: #7b00ff;
 }
 .sbm:hover{
-	-webkit-transition:font-size 0.3s;
 	font-size: 110%;
 	color: blue;
 }
