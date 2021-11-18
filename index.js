@@ -13,10 +13,9 @@ app.get('/',function(req,res){
   res.render('home.ejs')
 })
 
-app.get('/adotar',function(req,res){
-  res.render('adotar.ejs')
+app.get('/animais',function(req,res){
+  res.render('animais.ejs')
 })
-
 app.get('/sobre',function(req,res){
   res.render('sobre.ejs')
 })
@@ -31,6 +30,18 @@ app.get('/adotar',function(req,res){
 })
 app.get('/info',function(req,res){
   res.render('info.ejs')
+})
+app.get('/doar',function(req,res){
+  res.render('doar.ejs')
+})
+app.get('/perfil',function(req,res){
+  res.render('perfil.ejs')
+})
+app.get('/publicados',function(req,res){
+  res.render('publicados.ejs')
+})
+app.get('/publicar',function(req,res){
+  res.render('publicar.ejs')
 })
 app.get
 
