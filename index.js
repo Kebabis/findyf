@@ -20,6 +20,20 @@ app.get('/adotar',function(req,res){
 app.get('/sobre',function(req,res){
   res.render('sobre.ejs')
 })
+app.get('/login',function(req,res){
+  res.render('login.ejs')
+})
+app.get('/cadastro',function(req,res){
+  res.render('cadastro.ejs')
+})
+app.get('/adotar',function(req,res){
+  res.render('adotar.ejs')
+})
+app.get('/info',function(req,res){
+  res.render('info.ejs')
+})
+app.get
+
 app.post('/cadastro',function(req,res){
   var dados = req.body; conexao = app.db.conexao();
   usuario = new app.db.usuario(conexao);
