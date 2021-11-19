@@ -57,5 +57,5 @@ app.post('/cadastro',function(req,res){
 
 const porta=3000
 app.listen(porta,function(){
-  console.log('ta certinho')
+  console.log('ta foda')
 })
