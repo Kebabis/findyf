@@ -41,8 +41,12 @@ app.get('/publicados',function(req,res){
   res.render('publicados.ejs')
 })
 app.get('/publicar',function(req,res){
+  if(login == true){
   res.render('publicar.ejs')
-})
+}
+else{
+  res.render('cadastro.ejs')
+}})
 app.get
 
 app.post('/cadastro',function(req,res){
