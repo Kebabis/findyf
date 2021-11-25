@@ -125,6 +125,7 @@
         margin-right: 18%;
         margin-top: -47.3%;
         margin-left: 61%;
+        
     }
     #nome_info{
         font-size: 50px;
@@ -150,10 +151,12 @@
         font-family: 'Ubuntu',sans-serif;
         text-decoration: none;
         color:#7b00f2;
+        text-indent: 5px;
         
     }
     #ani_nome{
         text-decoration: none;
+        text-indent: 5px;
     }
     #btn_qr{
         font-family: 'Ubuntu',sans-serif;
@@ -170,6 +173,7 @@
     }
     #btn_qr:hover{
         background-color: #7b00ff;
+        transition: .4s;
     }
     #outros_amg{
         margin-left: 6.23%;

@@ -6,22 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/cadastro.css">
         <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="logo">
-            <a href= "/">
             <img id="img_logo" src="imagens/logo.png">
-        </a>
         </div>
         <div id="cad">
             <h2>Cadastro</h2>
         </div>
+        <a href="login.html">
+            <button id="btn_voltar">Voltar</button>
+        </a>
         <main>
-            <div>
-                <form action="ccadastro" method="post">
+            <div id="naosei">
+                <form action="" method="">
                     <h3 class="nomesImput">Nome</h3>
                     <input type="text" id="pri_input">
                     <h3 class="nomesImput">Email</h3>
@@ -29,7 +27,7 @@
                     <h3 class="nomesImput">Telefone</h3>
                     <input type="tel" id="ter_input">
                     <h3 class="nomesImput">Estado</h3>
-                    <select class="nomesImput">
+                    <select class="nomesImput" id="selects">
                         <option value="es">Espírito Santo</option>
                         <option value="mg">Minas Gerais</option>
                         <option value="rj">Rio de Janeiro</option>

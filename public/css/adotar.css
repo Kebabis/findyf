@@ -182,9 +182,14 @@
         font-family: 'Ubuntu',sans-serif;
         text-decoration: none;
         color:#7b00f2;
+        text-indent: 5px;
     }
     #ani_nome{
         text-decoration: none;
+        text-indent: 5px;
+    }
+    .span_ani{
+        text-indent: 5px;
     }
     footer{
         height: 297px;
