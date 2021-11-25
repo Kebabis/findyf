@@ -13,6 +13,10 @@ app.get('/',function(req,res){
   res.render('home.ejs')
 })
 
+app.get('/esqueci',function(req,res){
+  res.render('esqueci.ejs')
+})
+
 app.get('/animais',function(req,res){
   res.render('animais.ejs')
 })
