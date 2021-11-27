@@ -52,19 +52,20 @@ app.get('/publicar',function(req,res){
 else{
   res.render('cadastro.ejs')
 }})
-app.get
 
-app.post('/cadastro',function(req,res){
+app.get('/verperfil',function(req,res){
+  res.render('verperfil.ejs')
+})
+
+app.post('/ccadastro',function(req,res){
   var dados = req.body; conexao = app.db.conexao();
-  usuario = new app.db.usuario(conexao);
+  usuario = new app.db.banco(conexao);
   usuario.salvar(dados,function(erro,sucesso){
     if(erro){
       console.log(erro)
     }
+    res.redirect
   })
-})
-app.get('/verperfil',function(req,res){
-  res.render('verperfil.ejs')
 })
 const porta=3000
 app.listen(porta,function(){
