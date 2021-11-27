@@ -257,13 +257,16 @@ body{
 	float: left;
 	display:inline;
 }
+#menu{
+	visibility: hidden;
+}
 #link1{
 	font-family:'Ubuntu', sans-serif;
 	font-size: 20px;
 	color: #7b00ff;
 	display:inline-block;
 	text-align: center;
-	margin-left: 40%;
+	margin-left: 38%;
 	text-decoration: none;
 }
 #link1:hover{
@@ -481,6 +484,17 @@ footer{
 @media screen and (max-width: 360px){
 	body{
 		background-color:#f3f4f6;
+		font-family: 'Ubuntu',sans-serif;
+	}
+	#menu{
+			float: left;
+			margin-top: 0%;
+			margin-left: 10%;
+			padding: 2%;
+			border: thin;
+			background-color: #7b00f2;
+			color: #fefefe;
+			border-radius: 5px;
 	}
 	#img_logo{
 		margin-top: -20%;
@@ -500,9 +514,8 @@ footer{
 		margin-top: -14%;
 	}
 	#img_dados{
-		margin-top: 0%;
-		width: 100%;
-		height: 200px;
+		margin-top: 3%;
+		width: 90%;
 	}
 	#prim_h1{
 		font-size: 35px;

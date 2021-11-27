@@ -12,7 +12,7 @@
     body{
         background-color:#f3f4f6;
         background-image: url('../imagens/cachorro.jpg');
-        background-size: 50%;
+        background-size: 55%;
         background-repeat: no-repeat ;
     }
     #img_logo{
@@ -142,6 +142,132 @@
         padding: 0%;
     }
     body{
+        background-image: url('../imagens/cachorro.jpg');
+        background-size: 208%;
+    }
+    #img_logo{
+        width: 45%;
+        margin-left: 28%;
+        margin-right: 28%;
+        margin-top: -8%;
+    }
+    #cad{
+        color:#7b00ff;
+        font-family: 'Ubuntu',sans-serif;
+        margin-left: 34%;
+        margin-right: 34%;
+        margin-top: -15%;
+    }
+    #btn_voltar{
+        margin-top: 5%;
+        margin-left: 2%;
+        width: 12%;
+        border:none;
+        padding: 0.5%;
+        outline: none;
+        border-radius: 2px;
+        background-color: #7b00ff;
+        color:white;
+        cursor: pointer;
+        font-family: 'Ubuntu',sans-serif;
+    }
+    #btn_voltar:hover{
+        background:#7b00f1;
+    }
+    main{
+        margin-top: 2%;
+        background-color: #fefefe;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-family: 'Ubuntu',sans-serif;
+    }
+    .nomesImput{
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    input{
+        margin-top: 2%;
+        margin-left: 3%;
+        width: 89%;
         background-color: #f3f4f6;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #e9e6eb;
+        border:none;
+        outline: none;
+        padding: 2%;
+    }
+    input select{
+        color:#7b00ff;
+    }
+    #email{
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+    #pri_input{
+        margin-top: 2%;
+        margin-left: 3%;
+        width: 89%;
+        background-color: #f3f4f6;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #e9e6eb;
+        border:none;
+        outline: none;
+        padding: 2%;
+    }
+    #senha{
+        margin-top: 2%;
+        margin-left: 3%; 
+    }
+    #seg_input{
+        margin-top: 2%;
+        margin-left: 3%;
+        width: 89%;
+        background-color: #f3f4f6;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #e9e6eb;
+        border:none;
+        outline: none;
+        padding: 2%;
+    }
+    #btn{
+        margin-left: 35%;
+        background-color: #7b00ff;
+        color:white;
+        font-family: Ubuntum;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px;
+        width: 30%;
+		border-radius: 5px;
+        border: 0px;
+        box-shadow: 0 5px 0 #7b00f2;
+    }
+    #btn:hover{
+		background:#7b00f1 ;
+		box-shadow: 0 5px 0 #7b00f2;
+	}
+    #btn:active{
+		position: relative;
+		top: 5px;
+		box-shadow: none;
+	}
+    #esq_senha{
+        text-decoration: none;
+        color:#7b00f2;
+        margin-left: 30%;
+    }
+    #esq_senha:hover{
+        color: blue;
+    }
+    #criar{
+        margin-left: 30%;
+        text-decoration: none;
+        color:#7b00f2;
+    }
+    #criar:hover{
+        color: blue;
     }
 }

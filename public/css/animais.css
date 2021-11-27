@@ -23,7 +23,9 @@
     background-color: #f3f4f6;
     font-family: Arial;
     }
-
+    #menu{
+        visibility: hidden;
+    }
     #header{
         background-color: #ffffff;
         height: 50px;
@@ -44,7 +46,7 @@
         color: #7b00ff;
         display:inline-block;
         text-align: center;
-        margin-left: 40%;
+        margin-left: 38%;
         text-decoration: none;
     }
     #link1:hover{
@@ -302,5 +304,17 @@
         margin-top: 7%;
         bottom: 0%;
         margin-left: 45%;
+    }
+}
+@media screen and (max-width: 360px) {
+    #menu{
+        float: left;
+        margin-top: -27%;
+        margin-left: 10%;
+        padding: 2%;
+        border: thin;
+        background-color: #7b00f2;
+        color: #fefefe;
+        border-radius: 5px;
     }
 }
