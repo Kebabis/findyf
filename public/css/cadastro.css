@@ -4,12 +4,15 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 @media screen and (min-width: 901px) {
     *{
         margin: 0%;
         padding: 0%;
     }
     body{
+        font-family: 'Ubuntu', sans-serif;
         background-color:#f3f4f6;
         background-image: url('../imagens/cachorro.jpg');
         background-size: 55%;
@@ -26,7 +29,7 @@
         margin-top: 5%;
         margin-right: -10%;
         color:#7b00ff;
-        font-family: Ubuntum;
+        font-family: 'Ubuntu', sans-serif;
     }
     #btn_voltar{
         margin-top: 2%;
@@ -41,7 +44,7 @@
         color:white;
         cursor: pointer;
         font-family: 'Ubuntu',sans-serif;
-	font-weight: bold;
+	    font-weight: bold;
     }
     #btn_voltar:hover{
         background:#7b00f1;
@@ -61,6 +64,7 @@
         margin-bottom: 2%;
     }
     .nomesImput{
+        font-family: 'Ubuntu', sans-serif;
         margin-top: 2%;
         margin-left: 3%;
     }
@@ -86,6 +90,7 @@
         padding: 2%;
     }
     #senha{
+        font-family: 'Ubuntu', sans-serif;
         margin-top: 2%;
         margin-left: 3%; 
     }

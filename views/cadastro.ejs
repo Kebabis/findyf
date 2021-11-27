@@ -6,8 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/cadastro.css">
         <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <a href="/login">
+            <button id="btn_voltar">Voltar</button>
+        </a>
         <div id="logo">
             <img id="img_logo" src="imagens/logo.png">
         </div>
@@ -30,13 +39,15 @@
                         <option value="rj">Rio de Janeiro</option>
                         <option value="sp">São Paulo</option>
                     </select>
-                    <h3 class="nomesImput">Cidade</h3>
-                    <input type="text" id="qua_input">
+                    <h3 class="nomesImput">Cidades</h3>
+                    <select class="nomesImput" id="selects">
+                        <option value="São paulo">São paulo</option>
+                    </select>
                     <h3 class="nomesImput">Senha</h3>
                     <input type="text" id="qui_input"><br><br>
                     <input type="submit" id="btn"><br><br>
-                    <center>Já tem uma conta?
-                    <a href="/login" style="text-decoration: none;">Faça login</a></center>
+                    <center style="font-family: 'Ubuntu', sans-serif;">Já tem uma conta?
+                    <a href="/login" style="text-decoration: none; font-family: 'Ubuntu', sans-serif;">Faça login</a></center>
                 </form>
             </div>
         </main><br><br>

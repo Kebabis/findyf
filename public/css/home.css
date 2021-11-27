@@ -415,8 +415,8 @@ body{
 	font-size: 30px;
 }
 #texto1{
-	margin-left:5%;
-	margin-right: 5%;
+	margin-left:20%;
+	margin-right: 20%;
 	
 }
 .sbms{
@@ -432,13 +432,13 @@ body{
 }
 #cachorro_amarelo{
 	width: 15%;
-	margin-top: 6%;
+	margin-top: -13%;
 }
 #cachorro_roxo{
 	width:13%;
 	float: right;
 	margin-right: 2%;
-	margin-top: 1%;
+	margin-top: -17%;
 }
 footer{
 	height: 65%;
@@ -448,25 +448,21 @@ footer{
 	color: #ffffff;
 }
 #terc_h1{
-	position: flex;
 	padding-top: 5%;
 	margin-left: 11%;
 
 }
 #qur_h1{
-	position: flex;
 	margin-left: 34%;
-	margin-top: -3.6%;
+	margin-top: -3.35%;
 }
 #qui_h1{
-	position: flex;
 	margin-left: 57%;
-	margin-top: -3.6%;
+	margin-top: -3.45%;
 }
 #sex_h1{
-	position: flex;
 	margin-left: 70%;
-	margin-top: -3.6%;
+	margin-top: -3.5%;
 }
 .links{
 	color: #ffffff;
@@ -495,6 +491,7 @@ footer{
 			background-color: #7b00f2;
 			color: #fefefe;
 			border-radius: 5px;
+			font-family: 'Ubuntu',sans-serif;
 	}
 	#img_logo{
 		margin-top: -20%;
@@ -519,6 +516,7 @@ footer{
 	}
 	#prim_h1{
 		font-size: 35px;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	#pesquise{
 		margin-left: 23%;
@@ -526,6 +524,7 @@ footer{
 		position: flex;
 		z-index: 1;
 		margin-right: 23%;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	#escolha{
 		margin-left: 23%;
@@ -533,6 +532,7 @@ footer{
 		position: flex;
 		z-index: 0;
 		margin-right: 23%;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	#adote{
 		margin-left: 25%;
@@ -540,6 +540,7 @@ footer{
 		position: flex;
 		z-index: 0;
 		margin-right: 16%;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	.bol_amarela{
 		width: 60px;
@@ -549,16 +550,18 @@ footer{
 		margin-left: 35%;
 		color: #ffffff;
 		border-radius: 100px;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	#texto1{
 		margin-left:5%;
 		margin-right: 5%;
-		
+		font-family: 'Ubuntu',sans-serif;
 	}
 	.sbms{
 		font-family: 'Ubuntu', sans-serif;
 		text-decoration: none;
 		color: #7b00ff;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	.sbms:hover{
 		color: blue;
@@ -569,11 +572,13 @@ footer{
 	#porq{
 		margin-top:105%;
 		font-size: 20px;
+		font-family: 'Ubuntu',sans-serif;
 	}
 	#texto1{
 		margin-left: 10%;
 		margin-right: 10%;
 		margin-top: -5%;
+		font-family: 'Ubuntu',sans-serif;
 		font-family: 'Ubuntu',sans-serif;
 	}
 	#cachorro_amarelo{

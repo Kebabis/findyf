@@ -13,7 +13,7 @@
     body{
         background-color:#f3f4f6;
         background-image: url('../imagens/cachorro.jpg');
-        background-size: 50%;
+        background-size: 55%;
         background-repeat: no-repeat ;
     }
     #imgCa{
@@ -31,7 +31,7 @@
         margin-top: 12%;
         margin-right: -15.5%;
         color:#7b00ff;
-        font-family: Ubuntum;
+        font-family: 'Ubuntu',sans-serif;
     }
     #btn_voltar{
         margin-top: 2%;
@@ -62,6 +62,7 @@
         box-shadow: 5px 5px 5px gray;
     }
     #email{
+        font-family: 'Ubuntu',sans-serif;
         margin-top: 2%;
         margin-left: 3%;
     }
@@ -78,6 +79,7 @@
         padding: 2%;
     }
     #senha{
+        font-family: 'Ubuntu',sans-serif;
         margin-top: 2%;
         margin-left: 3%; 
     }
@@ -94,10 +96,10 @@
         padding: 2%;
     }
     #btn{
+        font-family: 'Ubuntu',sans-serif;
         margin-left: 38%;
         background-color: #7b00ff;
         color:white;
-        font-family: Ubuntum;
         font-size: 16px;
         cursor: pointer;
         padding: 10px;
@@ -116,7 +118,8 @@
 		box-shadow: none;
 	}
     #esq_senha{
-        margin-left: 38%;
+        font-family: 'Ubuntu',sans-serif;
+        margin-left: 40%;
         text-decoration: none;
         color:#7b00f2;
     }
@@ -124,7 +127,8 @@
         color: blue;
     }
     #criar{
-        margin-left: 38%;
+        font-family: 'Ubuntu',sans-serif;
+        margin-left: 40%;
         text-decoration: none;
         color:#7b00f2;
     }

@@ -38,6 +38,25 @@
         margin-left: 25%;
         font-family: 'Ubuntu', sans-serif;
     }
+    #btn_editar{
+        background: #7b00ff;
+        margin-left: 5.5%;
+        margin-top: 1%;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0px;
+        font-family: 'Ubuntu', sans-serif;;
+        color: white;
+        box-shadow: 0
+    }
+    #btn_editar:hover{
+        background:#7b00ff;
+    }
+    #btn_editar:active{
+        position: relative;
+        box-shadow: none;
+    }
     #cont{
         color:#7b00f2;
         font-family: 'Ubuntu', sans-serif;

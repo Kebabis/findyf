@@ -45,6 +45,7 @@ app.get('/publicados',function(req,res){
   res.render('publicados.ejs')
 })
 app.get('/publicar',function(req,res){
+  var login=true;
   if(login == true){
   res.render('publicar.ejs')
 }
@@ -62,7 +63,9 @@ app.post('/cadastro',function(req,res){
     }
   })
 })
-
+app.get('/verperfil',function(req,res){
+  res.render('verperfil.ejs')
+})
 const porta=3000
 app.listen(porta,function(){
   console.log('ta foda')
