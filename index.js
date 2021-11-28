@@ -64,7 +64,18 @@ app.post('/ccadastro',function(req,res){
     if(erro){
       console.log(erro)
     }
-    res.redirect
+    res.redirect('/')
+  })
+})
+
+app.post('/clogin',function(req,res){
+  var dados= req.body; conexao = app.db.conexao();
+  usuario = new app.db.banco(conexao);
+  usuario.salvar(dados,function(erro,sucesso){
+    if(erro){
+      console.log(erro)
+    }
+    res.redirect('/')
   })
 })
 const porta=3000

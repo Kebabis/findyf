@@ -13,7 +13,7 @@ function usuarioBanco(conexao){
   
   usuarioBanco.prototype.buscarNome = function(nome,callback){
     var parametro = nome.nomeBusca;
-    this._conexao.query('SELECT * FROM usuario WHERE nome = ?',parametro,callback);
+    this._conexao.query('SELECT * FROM usuario WHERE email = ? AND senha = ?',parametro,callback);
   }
   
   usuarioBanco.prototype.deletar = function(id,callback){
