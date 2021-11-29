@@ -63,6 +63,7 @@ else{
   res.render('cadastro.ejs')
 }})
 
+<<<<<<< HEAD
 app.get('/verperfil/:id',function(req,res){
   var id = req.params.id; conexao = app.db.conexao();
   usuario = new app.db.banco(conexao);
@@ -80,10 +81,16 @@ app.get('/verperfil/:id',function(req,res){
 app.post('/ccadastro',function(req,res){
   var dados = req.body; conexao = app.db.conexao();
   usuario = new app.db.banco(conexao);
+=======
+app.post('/ccadastro',function(req,res){
+  var dados = req.body; conexao = app.db.conexao();
+  usuario = new app.db.usuariobanco(conexao);
+>>>>>>> 0333db10ba00889b957d4bc1ff617015cdbbf114
   usuario.salvar(dados,function(erro,sucesso){
     if(erro){
       console.log(erro)
     }
+<<<<<<< HEAD
     res.redirect('/')
   })
 })
@@ -108,6 +115,29 @@ app.post('/clogin',function(req,res){
       }
     }
   })
+=======
+    else{
+      res.redirect('/')
+    }
+  })
+})
+
+app.post('/clogin',function(req,res){
+  var dados = req.body; conexao = app.db.conexao();
+  usuario = new app.db.usuariobanco(conexao);
+  usuario.login(dados,function(erro,sucesso){
+    if(erro){
+      console.log(erro)
+    }
+    else{
+      console.log('sucesso')
+      res.redirect('/')
+    }
+  })
+})
+app.get('/verperfil',function(req,res){
+  res.render(verperfil.ejs)
+>>>>>>> 0333db10ba00889b957d4bc1ff617015cdbbf114
 })
 const porta=3000
 app.listen(porta,function(){
