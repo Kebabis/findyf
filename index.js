@@ -54,17 +54,34 @@ else{
 }})
 app.get
 
-app.post('/cadastro',function(req,res){
+app.post('/ccadastro',function(req,res){
   var dados = req.body; conexao = app.db.conexao();
-  usuario = new app.db.usuario(conexao);
+  usuario = new app.db.usuariobanco(conexao);
   usuario.salvar(dados,function(erro,sucesso){
     if(erro){
       console.log(erro)
     }
+    else{
+      res.redirect('/')
+    }
+  })
+})
+
+app.post('/clogin',function(req,res){
+  var dados = req.body; conexao = app.db.conexao();
+  usuario = new app.db.usuariobanco(conexao);
+  usuario.login(dados,function(erro,sucesso){
+    if(erro){
+      console.log(erro)
+    }
+    else{
+      console.log('sucesso')
+      res.redirect('/')
+    }
   })
 })
 app.get('/verperfil',function(req,res){
-  res.render('verperfil.ejs')
+  res.render(verperfil.ejs)
 })
 const porta=3000
 app.listen(porta,function(){
