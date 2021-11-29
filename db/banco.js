@@ -7,13 +7,14 @@ function usuarioBanco(conexao){
     this._conexao.query('insert into usuario set ?',dados,callback);
   }
   
-  usuarioBanco.prototype.buscarGeral = function(callback){
-    this._conexao.query('SELECT * FROM usuario',callback);
+  usuarioBanco.prototype.buscaid = function(callback){
+    this._conexao.query('SELECT * FROM usuario WHERE id = ?',callback);
   }
   
   usuarioBanco.prototype.buscarNome = function(nome,callback){
-    var parametro = nome.nomeBusca;
-    this._conexao.query('SELECT * FROM usuario WHERE email = ? AND senha = ?',parametro,callback);
+    var parametro = nome;
+    console.log(parametro)
+    this._conexao.query('SELECT * FROM usuario WHERE email = ? AND senha = ?',[parametro.email, parametro.senha],callback);
   }
   
   usuarioBanco.prototype.deletar = function(id,callback){

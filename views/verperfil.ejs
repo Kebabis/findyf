@@ -31,8 +31,8 @@
                 <a href="/perfil">
        		 	<input id="btn_editar" type="button" value="Editar perfil">
     			</a>
-                <h1 id="nome_perfil">Nome</h1> 
-                <h3 id="infos"><span id="cont"><b>Contatos</b>:</span><br>email@email.com<br>(11) 4002-8922</h3>
+                <h1 id="nome_perfil"><%= resultado[0].nome %> </h1> 
+                <h3 id="infos"><span id="cont"><b>Contatos</b>:</span><br><%= resultado[0].email %> <br><%= resultado[0].telefone %> </h3>
                 <h1 id="ani_anunciados">Animais anunciados por esse perfil</h1>
             <div id="quads">
                 <div class="quad">

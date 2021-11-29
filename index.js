@@ -1,6 +1,12 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+const url = require('url');    
+const querystring = require('querystring');    
+
+//Coisas para perguntar pro professor: 
+// variavel global
+// res.redirect
 
 var load = require('express-load')
 load('db').into(app)
@@ -9,10 +15,14 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
+
 app.get('/',function(req,res){
-  res.render('home.ejs')
+  res.render('home.ejs',{'login':false})
 })
 
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
 app.get('/esqueci',function(req,res){
   res.render('esqueci.ejs')
 })
@@ -24,7 +34,7 @@ app.get('/sobre',function(req,res){
   res.render('sobre.ejs')
 })
 app.get('/login',function(req,res){
-  res.render('login.ejs')
+  res.render('login.ejs',{'erro':false})
 })
 app.get('/cadastro',function(req,res){
   res.render('cadastro.ejs')
@@ -53,8 +63,18 @@ else{
   res.render('cadastro.ejs')
 }})
 
-app.get('/verperfil',function(req,res){
-  res.render('verperfil.ejs')
+app.get('/verperfil/:id',function(req,res){
+  var id = req.params.id; conexao = app.db.conexao();
+  usuario = new app.db.banco(conexao);
+  usuario.buscaid(id,function(erro,sucesso){
+    if(erro){
+      console.log(erro)
+    }
+    else{
+      console.log(sucesso)
+      res.render('verperfil.ejs',{"resultado": sucesso})
+    }
+  })
 })
 
 app.post('/ccadastro',function(req,res){
@@ -68,14 +88,25 @@ app.post('/ccadastro',function(req,res){
   })
 })
 
+app.get('/clogin',function(req,res){
+  res.redirect('/')
+})
+
 app.post('/clogin',function(req,res){
   var dados= req.body; conexao = app.db.conexao();
   usuario = new app.db.banco(conexao);
-  usuario.salvar(dados,function(erro,sucesso){
+  usuario.buscarNome(dados,function(erro,sucesso){
     if(erro){
       console.log(erro)
     }
-    res.redirect('/')
+    else{
+      if(isEmpty(sucesso)){
+        res.render('login.ejs',{'erro':true})
+      }
+      else{
+        res.render('home.ejs',{'resultado': sucesso, 'login': true})
+      }
+    }
   })
 })
 const porta=3000
