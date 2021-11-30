@@ -15,6 +15,8 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
+app.locals.login = false
+app.locals.id = 0
 
 app.get('/',function(req,res){
   res.render('home.ejs',{'login':false})
@@ -48,7 +50,7 @@ app.get('/info',function(req,res){
 app.get('/doar',function(req,res){
   res.render('doar.ejs')
 })
-app.get('/perfil',function(req,res){
+app.get('/perfil/:id',function(req,res){
   res.render('perfil.ejs')
 })
 app.get('/publicados',function(req,res){
@@ -63,7 +65,20 @@ else{
   res.render('cadastro.ejs')
 }})
 
-<<<<<<< HEAD
+app.post('/canimal',function(req,res){
+  var dados = req.body; conexao = app.db.conexao();
+  usuario = new app.db.banco(conexao);
+  dados.dono = id;
+  usuario.salvaranimal(dados,function(erro,sucesso){
+    if(erro){
+      console.log(erro)
+    }
+    else{
+      res.render('adotar.ejs',{'resultado': sucesso})
+    }
+  })
+})
+
 app.get('/verperfil/:id',function(req,res){
   var id = req.params.id; conexao = app.db.conexao();
   usuario = new app.db.banco(conexao);
@@ -81,16 +96,10 @@ app.get('/verperfil/:id',function(req,res){
 app.post('/ccadastro',function(req,res){
   var dados = req.body; conexao = app.db.conexao();
   usuario = new app.db.banco(conexao);
-=======
-app.post('/ccadastro',function(req,res){
-  var dados = req.body; conexao = app.db.conexao();
-  usuario = new app.db.usuariobanco(conexao);
->>>>>>> 0333db10ba00889b957d4bc1ff617015cdbbf114
   usuario.salvar(dados,function(erro,sucesso){
     if(erro){
       console.log(erro)
     }
-<<<<<<< HEAD
     res.redirect('/')
   })
 })
@@ -98,6 +107,7 @@ app.post('/ccadastro',function(req,res){
 app.get('/clogin',function(req,res){
   res.redirect('/')
 })
+
 
 app.post('/clogin',function(req,res){
   var dados= req.body; conexao = app.db.conexao();
@@ -111,33 +121,12 @@ app.post('/clogin',function(req,res){
         res.render('login.ejs',{'erro':true})
       }
       else{
+        login = true
+        id = sucesso.id
         res.render('home.ejs',{'resultado': sucesso, 'login': true})
       }
     }
   })
-=======
-    else{
-      res.redirect('/')
-    }
-  })
-})
-
-app.post('/clogin',function(req,res){
-  var dados = req.body; conexao = app.db.conexao();
-  usuario = new app.db.usuariobanco(conexao);
-  usuario.login(dados,function(erro,sucesso){
-    if(erro){
-      console.log(erro)
-    }
-    else{
-      console.log('sucesso')
-      res.redirect('/')
-    }
-  })
-})
-app.get('/verperfil',function(req,res){
-  res.render(verperfil.ejs)
->>>>>>> 0333db10ba00889b957d4bc1ff617015cdbbf114
 })
 const porta=3000
 app.listen(porta,function(){

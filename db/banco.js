@@ -7,10 +7,20 @@ function usuarioBanco(conexao){
     this._conexao.query('insert into usuario set ?',dados,callback);
   }
   
-  usuarioBanco.prototype.buscaid = function(callback){
-    this._conexao.query('SELECT * FROM usuario WHERE id = ?',callback);
+  usuarioBanco.prototype.buscaid = function(parametro, callback){
+    this._conexao.query('SELECT * FROM usuario WHERE id = ?',parametro,callback);
   }
   
+
+  usuarioBanco.prototype.queroadotar = function(parametro,callback){
+    this._conexao.query('SELECT * FROM animal')
+  }
+
+usuarioBanco.prototype.salvaranimal = function(dados,callback){
+  this._conexao.query('insert into animal set ?',dados,callback)
+}
+
+
   usuarioBanco.prototype.buscarNome = function(nome,callback){
     var parametro = nome;
     console.log(parametro)

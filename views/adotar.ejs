@@ -108,14 +108,22 @@
                 </div>
             </div>
             <br>
-            <div id="quads">
-                <div class="quad">
-                    <a href="/info"><img id="img_ani" src="./imagens/cachorro.jpg" width="100%"></a>
-                    <a id="ani_nome" href="/info"><h2 class="nome_ani">Nome</h2></a>
+                    <table>
+                    <% var a=0;b=0; while(a<5){ %>
+                        <div id="quads">
+                        <tr>                 <div class="quad"></div>
+                          <% while(b<5){ %>
+                   <td> <a href="/info"><img id="img_ani" src="./imagens/cachorro.jpg" width="100%"></a> 
+                    <a id="ani_nome" href="/info"><h2 class="nome_ani">resultado[b<.nome/h2></a> 
                     <h3 class="nome_ani">Cidade</h3>
-                    <h3 class="nome_ani">Por(nome do atual <span class="span_ani">dono</span>)</h3><br><br>
+                    <h3 class="nome_ani">Por(nome do atual <span class="span_ani">dono</span>)</td></h3><br><br>
+                    <% b++ } %>
+                          </tr>
+                    <% a++ } %>  
+                </table>
                 </div>
             </div>
+            
         </main><br><br>
         <footer>
 			<div id="terc_h1">
