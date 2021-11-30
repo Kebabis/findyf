@@ -12,7 +12,7 @@ function usuarioBanco(conexao){
   }
   
 
-  usuarioBanco.prototype.queroadotar = function(parametro,callback){
+  usuarioBanco.prototype.queroadotar = function(callback){
     this._conexao.query('SELECT * FROM animal')
   }
 

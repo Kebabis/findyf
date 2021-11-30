@@ -1,8 +1,7 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
-const url = require('url');    
-const querystring = require('querystring');    
+var login = false;
 
 //Coisas para perguntar pro professor: 
 // variavel global
@@ -123,7 +122,7 @@ app.post('/clogin',function(req,res){
       else{
         login = true
         id = sucesso.id
-        res.render('home.ejs',{'resultado': sucesso, 'login': true})
+        res.render('home.ejs',{'resultado': sucesso, 'login': login})
       }
     }
   })
