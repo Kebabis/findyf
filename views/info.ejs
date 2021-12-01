@@ -4,8 +4,8 @@
         <title>Findyf</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="css/info.css">
-        <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
+        <link rel="stylesheet" href="../css/info.css">
+        <link rel="icon" type="image/x-icon" href="../imagens/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -13,58 +13,56 @@
     <body>
         <header id="header">
 			<div id="logo">
-				<img id="img_logo" src="imagens/logo.png">
+				<img id="img_logo" src="../imagens/logo.png">
 			</div>
             <button id="menu">≡</button>
 				<a id="link1" href="/">Início</a>
                     <a id="link2" href="/sobre">Sobre</a>
                     <a id="link3" href="/adotar">Quero adotar</a>
                     <a id="link3" href="/doar">Doar</a>
-			<div>
-				<a href="/login">
-       		 	<input id="btn" type="button" value="Entrar">
-    			</a>
-			</div>
+
 		</header>
         <main>
             <div id="informacoes">
-                <div id="caroussel">
-                    <img class="img_menor" id="img_menor1"src="imagens/cachorro.jpg"><br>
-                    <img class="img_menor" src="imagens/cachorro.jpg"><br>
-                    <img class="img_menor" src="imagens/cachorro.jpg">
+             <div id="caroussel">
                 </div>
-                <img id="img_maior" src="imagens/cachorro.jpg">
+                <img id="img_maior" src="../imagens/cachorro.jpg">
             </div>
             <div id="texto_info">
-                <h1 id="nome_info">Nome</h1>
-                <h3 class="textos1">Publicado por (nome da pessoa)</h3>
-                <h3 class="textos1">Localizado em São Paulo, São Paulo</h3>
+                <% var resul=resultado[0]; don= dono[0] %> 
+                <h1 id="nome_info"><%= resul.nome %> </h1>
+                <h3 class="textos1">Publicado por: <%= don.nome %> </h3>
+                <h3 class="textos1">Localizado em <%= don.cidade %> , <%= don.estado %> </h3>
                 <h2 class="sobre_info">Sobre o animal</h2>
-                <h3 class="textos2">Pensando mais a longo prazo, a necessidade 
-                    de renovação processual exige a precisão 
-                    e a definição da gestão inovadora 
-                    da qual fazemos parte.</h3><br>
-                <h3 class="textos2">Todavia, o julgamento imparcial das 
-                    eventualidades assume importantes 
-                    posições no estabelecimento dos 
-                    índices pretendidos.</h3>
+                <h3 class="textos2"><%= resul.sobre %> </h3>
                 <h2 class="sobre_info">Características</h2>
-                <h3 class="textos2">Espécie: Cachorro</h3>
-                <h3 class="textos2">Sexo: Macho</h3>
-                <h3 class="textos2">Porte: Pequeno</h3><br><br><br><br><br>
-                <a href="/login">
+                <h3 class="textos2">Espécie: <%= resul.especie %> </h3>
+                <h3 class="textos2">Sexo: <%= resul.sexo %> </h3>
+                <h3 class="textos2">Porte: <%= resul.porte %> </h3><br><br><br><br><br>
+                <a href="/verperfil/<%= don.id %> ">
        		 	<input id="btn_qr" type="button" value="Quero adotar">
     			</a>
             </div>
             <br>
         </main>
         <h1 id="outros_amg">Outros amigos procurando um lar</h1>
-         <div class="quad">
-            <a href="#"><img id="img_ani" src="./imagens/cachorro.jpg" width="100%"></a>
-            <a id="ani_nome" href="#"><h2 class="nome_ani">Nome</h2></a>
-             <h3 class="nome_ani">Cidade</h3>
-             <h3 class="nome_ani">Por(nome do atual dono)</h3><br><br>
-         </div>
+        <table>
+            <% var resul=resultado;a=0; %>
+                <div id="quads">
+                <tr> <div class="quad"> 
+                    <% var a=0; b=0; c=0; while(a<5){ %>
+                    <% while (b<4){ %>
+                        <% if(resul[c]===undefined) {break} %>      
+           <td> <a href="/info/<%= resul[c].id %>"><img id="img_ani" src="../imagens/cachorro.jpg" width="100%"></a> 
+            <a id="ani_nome" href="/info/<%= resul[c].id %>"><h2 class="nome_ani"> <%=  resul[c].nome %></h2></a> 
+            <h3 class="nome_ani">Cidade <%= dono[0].cidade %> </h3>
+            <h3 class="nome_ani">Por<span class="span_ani"> <%= dono[0].nome %> </span></td></h3><br><br>
+            <% b++; c++} %> 
+           </tr>
+           <% b=0; a++} %> 
+        </table>
+        </div>
+    </div>
         <br><br>
         <footer>
 			<div id="terc_h1">
@@ -86,7 +84,7 @@
 				<a class="links" href="https://www.youtube.com/watch?v=wXhTHyIgQ_U">Facebook</a>
 			</div>
             <div">
-                <img id="logo_final" src="imagens/logofinal.PNG">
+                <img id="logo_final" src="../imagens/logofinal.PNG">
             </div>
 		</footer>
     </body>

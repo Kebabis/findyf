@@ -11,7 +11,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
+<style>
+	#btnPerfil{
+                text-decoration: none;
+				float: right;
+				margin-top: -1.8%;
+				width: 6%;
+				margin-right: 5%;
+            }
+            #imgPerfil_img{
+				width: 17%;
+            }
+            #spanPerfil{
+                font-size: 20px;
+                padding-left: .5% ;
+                font-family: 'Ubuntu', sans-serif;
+            }
+</style>
 </head>
 	<body>
 		<header id="header">
@@ -30,7 +46,7 @@
        		 	<input id="btn" type="button" value="Entrar">
     			</a>
 				<% } else{ var resul = resultado %>
-					<a href="/verperfil/<%= resul[0].id %> "> <%= resul[0].nome %> </a>
+					<a id="btnPerfil" href="/verperfil/<%= resul[0].id %> "><img id="imgPerfil_img" src="imagens/user.png"><span id="spanPerfil"><%= resul[0].nome %></span></a>
 					<% } %> 
 			</div>
 		</header>

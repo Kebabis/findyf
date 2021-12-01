@@ -22,9 +22,13 @@
             <a id="link3" href="/adotar">Quero adotar</a>
             <a id="link3" href="/doar">Doar</a>
 			<div>
-				<a href="/login">
-       		 	<input id="btn" type="button" value="Entrar">
-    			</a>
+                <% if(login === false){ %>
+                    <a href="/login">
+                        <input id="btn" type="button" value="Entrar">
+                    </a>
+                    <% } else{ var resul = resultado %>
+                        <a href="/verperfil/<%= resul[0].id %> "> <%= resul.nome %> </a>
+                        <% } %> 
 			</div>
 		</header>
         <main>

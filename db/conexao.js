@@ -4,7 +4,7 @@ function criarConexao(){
   return mysql.createConnection ({
     host:'localhost',
     user: 'root',
-    password: '',
+    password: 'usbw',
     database: 'tcc_findyf',
     insecureAuth: 'true',
     multipleStatements: 'true'

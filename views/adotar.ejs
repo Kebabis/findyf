@@ -21,9 +21,6 @@
 				<a id="link3" href="/adotar">Quero adotar</a>
                 <a id="link3" href="/doar">Doar</a>
 			<div>
-				<a href="/login">
-       		 	<input id="btn" type="button" value="Entrar">
-    			</a>
 			</div>
 		</header>
         <main>
@@ -109,17 +106,19 @@
             </div>
             <br>
                     <table>
-                    <% var a=0;b=0; while(a<5){ %>
+                    <% var resul=resultado;a=0; %>
                         <div id="quads">
-                        <tr>                 <div class="quad"></div>
-                          <% while(b<4){ %>
-                   <td> <a href="/info"><img id="img_ani" src="./imagens/cachorro.jpg" width="100%"></a> 
-                    <a id="ani_nome" href="/info"><h2 class="nome_ani">nao</h2></a> 
-                    <h3 class="nome_ani">Cidade</h3>
-                    <h3 class="nome_ani">Por(nome do atual <span class="span_ani">dono</span>)</td></h3><br><br>
-                    <% b++ } %>
-                          </tr>
-                    <% b=0;a++; } %>  
+                        <tr> <div class="quad"> 
+                            <% var a=0; b=0; c=0; while(a<5){ %>
+                            <% while (b<4){ %>
+                                <% if(resul[c]===undefined) {break} %>      
+                   <td> <a href="/info/<%= resul[c].id %>"><img id="img_ani" src="./imagens/cachorro.jpg" width="100%"></a> 
+                    <a id="ani_nome" href="/info/<%= resul[c].id %>"><h2 class="nome_ani"> <%=  resul[c].nome %></h2></a> 
+                    <h3 class="nome_ani">Cidade <%= dono[0].cidade %> </h3>
+                    <h3 class="nome_ani">Por<span class="span_ani"> <%= dono[0].nome %> </span></td></h3><br><br>
+                    <% b++; c++} %> 
+                   </tr>
+                   <% b=0; a++} %> 
                 </table>
                 </div>
             </div>

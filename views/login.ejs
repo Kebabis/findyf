@@ -23,13 +23,13 @@
         </div>
         <main>
             <% if(erro===true){%>
-                <p>Email ou senha incorretos</p>
+                <center><p style="font-family: 'Ubuntu',sans-serif; margin-top: 1%;color: #ab0017;">Email ou senha incorretos</p></center>
             <% } %>
             <br><h3 id="email">Email</h3>
             <form action="/clogin" method="post">
                 <input type="text" id="pri_input" name="email">
                 <h3 id="senha">Senha</h3>
-                <input type="text" id="seg_input" name="senha"><br><br>
+                <input type="password" id="seg_input" name="senha"><br><br>
                 <input type="submit" id="btn" value="Entrar">
             </form><br><br>
             <a id="esq_senha" href="/esqueci">Esqueci a senha</a><br>

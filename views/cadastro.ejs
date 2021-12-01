@@ -14,9 +14,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <a href="/login">
-            <button id="btn_voltar">Voltar</button>
-        </a>
         <div id="logo">
             <img id="img_logo" src="imagens/logo.png">
         </div>
@@ -25,6 +22,10 @@
         </div>
         <main>
             <div id="naosei">
+                <% var erro = erro; if(erro){ %>
+                  
+                <center><p style="font-family: 'Ubuntu',sans-serif; margin-top: 1%;color: #ab0017;">Por favor digite todos os campos</p></center>
+                    <% } %>  
                 <form action="/ccadastro" method="post">
                     <h3 class="nomesImput">Nome</h3>
                     <input type="text" id="pri_input" name="nome">
@@ -39,12 +40,10 @@
                         <option value="rj">Rio de Janeiro</option>
                         <option value="sp">São Paulo</option>
                     </select>
-                    <h3 class="nomesImput">Cidades</h3>
-                    <select class="nomesImput" id="selects" name="cidade">
-                        <option value="São paulo">São paulo</option>
-                    </select>
+                    <h3 class="nomesImput">Cidade</h3>
+                    <input type="tel" id="ter_input" name="cidade">
                     <h3 class="nomesImput">Senha</h3>
-                    <input type="text" id="qui_input" name="senha"><br><br>
+                    <input type="password" id="qui_input" name="senha"><br><br>
                     <input type="submit" id="btn" value="Cadastrar-se"><br><br>
                     <center style="font-family: 'Ubuntu', sans-serif;">Já tem uma conta?
                     <a href="/login" style="text-decoration: none; font-family: 'Ubuntu', sans-serif;">Faça login</a></center>
